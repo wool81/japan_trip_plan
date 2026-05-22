@@ -180,6 +180,20 @@
       border:1px solid rgba(255,255,255,0.08);
     }
 
+    /* 調整按鈕在黑底風格下的基礎樣式 */
+    button {
+      background: #263849;
+      color: #9ddcff;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    button:hover {
+      background: #344b61;
+    }
+
     footer{
       text-align:center;
       padding:40px 20px;
@@ -303,7 +317,6 @@
   </section>
 
 
-  <!-- D1 -->
   <section class="day-card">
     <div class="day-title">
       <div class="day-number">1</div>
@@ -313,15 +326,12 @@
     <span class="tag">✈️ 泰越捷航空</span>
     <span class="tag">02:50 → 07:35</span>
 
-<div class="timeline">
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>14:00 新千歲機場 (交通)</h3>
+        <p>入境後搭 JR 前往札幌市區</p>
+      </div>
 
-      <div class="item">
-        <div class="time">14:00</div>
-        <div class="place">新千歲機場</div>
-        <div class="desc">
-          入境後搭 JR 前往札幌市區
-        </div>
-        <div class="tag">交通</div>
       <div class="timeline-item">
         <h3>機場必買清單</h3>
         <p>
@@ -330,27 +340,23 @@
           ・札幌農学校（餅乾）<br>
           ・北海道牛乳カステラ（蛋糕）
         </p>
-</div>
+      </div>
 
-      <div class="item">
-        <div class="time">17:00</div>
-        <div class="place">狸小路商店街</div>
-        <div class="desc">
-          藥妝、動漫店、扭蛋巡禮
-        </div>
-        <div class="tag">購物</div>
+      <div class="timeline-item">
+        <h3>17:00 狸小路商店街 (購物)</h3>
+        <p>藥妝、動漫店、扭蛋巡禮</p>
+      </div>
+
       <div class="timeline-item">
         <h3>前往札幌</h3>
         <p>搭乘機場巴士前往飯店寄放行李。</p>
-</div>
+      </div>
 
-      <div class="item">
-        <div class="time">19:00</div>
-        <div class="place">札幌拉麵共和國</div>
-        <div class="desc">
-          晚餐推薦味噌拉麵
-        </div>
-        <div class="tag">美食</div>
+      <div class="timeline-item">
+        <h3>19:00 札幌拉麵共和國 (美食)</h3>
+        <p>晚餐推薦味噌拉麵</p>
+      </div>
+
       <div class="timeline-item">
         <h3>札幌市區行程</h3>
         <p>
@@ -366,55 +372,47 @@
       <div class="timeline-item">
         <h3>晚上自由逛街</h3>
         <p>狸小路、薄野散步購物。</p>
-</div>
-
-</div>
-  </div>
+      </div>
+    </div>
   </section>
 
-  <div class="day-card">
-    <div class="day-title">Day 2｜小樽一日遊</div>
-  <!-- D2 -->
+
   <section class="day-card">
     <div class="day-title">
       <div class="day-number">2</div>
       <h2>小樽水族館 🐧</h2>
     </div>
 
-<div class="timeline">
-
-      <div class="item">
-        <div class="time">10:00</div>
-        <div class="place">小樽運河</div>
-        <div class="desc">
-          拍復古街景與玻璃工藝店
-        </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>10:00 小樽運河</h3>
+        <p>拍復古街景與玻璃工藝店</p>
+      </div>
+      
       <div class="timeline-item">
         <h3>前往小樽</h3>
         <p>
           JR 小樽站 → 巴士約 40 分鐘前往水族館
         </p>
-</div>
+      </div>
 
-      <div class="item">
-        <div class="time">13:00</div>
-        <div class="place">三角市場</div>
-        <div class="desc">
-          海鮮丼午餐
-        </div>
+      <div class="timeline-item">
+        <h3>13:00 三角市場</h3>
+        <p>海鮮丼午餐</p>
+      </div>
+      
       <div class="timeline-item">
         <h3>小樽水族館</h3>
         <p>
           海豚秀、企鵝散步、水族館午餐
         </p>
-</div>
+      </div>
 
-      <div class="item">
-        <div class="time">18:00</div>
-        <div class="place">札幌車站 Anime 巡店</div>
-        <div class="desc">
-          Animate、Jump Shop、快閃店
-        </div>
+      <div class="timeline-item">
+        <h3>18:00 札幌車站 Anime 巡店</h3>
+        <p>Animate、Jump Shop、快閃店</p>
+      </div>
+      
       <div class="timeline-item">
         <h3>小樽運河散步</h3>
         <p>
@@ -431,29 +429,23 @@
             Google Maps
           </a>
         </p>
-</div>
-
-</div>
-  </div>
+      </div>
+    </div>
   </section>
 
-  <div class="day-card">
-    <div class="day-title">Day 3｜自由活動</div>
-  <!-- D3 -->
+
   <section class="day-card">
     <div class="day-title">
       <div class="day-number">3</div>
       <h2>北海道神宮・札幌購物 🌸</h2>
     </div>
 
-<div class="timeline">
-
-      <div class="item">
-        <div class="time">全天</div>
-        <div class="place">可自由安排</div>
-        <div class="desc">
-          推薦：白色戀人公園、藻岩山夜景、Outlet
-        </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>全天 可自由安排</h3>
+        <p>推薦：白色戀人公園、藻岩山夜景、Outlet</p>
+      </div>
+      
       <div class="timeline-item">
         <h3>早餐</h3>
         <p>購買飯店早餐券。</p>
@@ -493,11 +485,11 @@
         <p>
           札幌地下街 → 薄野 → 大丸 → PARCO → APIA → 狸小路
         </p>
-      </div>
-
         <button onclick="alert('記得預留時間買伴手禮！')">
           查看提醒
         </button>
+      </div>
+
       <div class="timeline-item">
         <h3>甜點</h3>
         <p>
@@ -514,30 +506,11 @@
             Google Maps
           </a>
         </p>
-</div>
-
-</div>
-  </div>
-
- 
- <div class="day-card">
-   <div class="day-title">Day 4｜函館</div>
- 
-   <div class="timeline">
- 
-     <div class="item">
-       <div class="time">10:00</div>
-       <div class="place">函館朝市</div>
-       <div class="desc">
-         海鮮丼早餐
-       </div>
-     </div>
- 
-   </div>
- </div>
+      </div>
+    </div>
   </section>
 
-  <!-- D4 -->
+
   <section class="day-card">
     <div class="day-title">
       <div class="day-number">4</div>
@@ -545,7 +518,6 @@
     </div>
 
     <div class="timeline">
-
       <div class="timeline-item">
         <h3>札幌站寄放行李</h3>
         <p>JR 札幌站西口寄放。</p>
@@ -584,11 +556,10 @@
           蛋包飯份量超大！
         </p>
       </div>
-
     </div>
   </section>
 
-  <!-- D5 -->
+
   <section class="day-card">
     <div class="day-title">
       <div class="day-number">5</div>
@@ -596,7 +567,6 @@
     </div>
 
     <div class="timeline">
-
       <div class="timeline-item">
         <h3>烤菠蘿麵包</h3>
         <p>
@@ -640,11 +610,10 @@
         <h3>六花亭 五稜郭店</h3>
         <p>買伴手禮與甜點。</p>
       </div>
-
     </div>
   </section>
 
-  <!-- D6 -->
+
   <section class="day-card">
     <div class="day-title">
       <div class="day-number">6</div>
@@ -652,7 +621,6 @@
     </div>
 
     <div class="timeline">
-
       <div class="timeline-item">
         <h3>飯店早餐</h3>
         <p>悠閒享用早餐。</p>
@@ -679,7 +647,6 @@
         <h3>回台北 🇹🇼</h3>
         <p>旅程結束！</p>
       </div>
-
     </div>
 
     <div class="note">
