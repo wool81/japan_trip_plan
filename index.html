@@ -1,33 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>北海道自由行旅遊計畫</title>
-  <title>你要不要去北海道</title>
 
-<style>
-*{
-@@ -192,32 +192,92 @@
-color:white;
-}
-
-    @media(max-width:768px){
-
-      header h1{
-        font-size:32px;
-      }
-
-      .day-title{
-        align-items:flex-start;
-      }
-
-      .day-title h2{
-        font-size:22px;
-      }
-
-      .day-card{
-        padding:24px;
-      }
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
+
+    body{
+      font-family:"Noto Sans TC",sans-serif;
+      background:#121212;
+      color:#f1f1f1;
+      line-height:1.7;
+    }
+
+    header{
+      background:linear-gradient(135deg,#1f3b57,#27496d);
+      color:white;
+      padding:50px 20px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    header h1{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:18px;
+      opacity:0.9;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+
+    .hotel-section{
+      background:#1e1e1e;
+      border-radius:22px;
+      padding:25px;
+      margin-bottom:35px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.35);
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .hotel-section h2{
+      margin-bottom:20px;
+      color:#8fd3ff;
+    }
+
+    .hotel-card{
+      background:#2a2a2a;
+      border-left:6px solid #5eb5ff;
+      padding:18px;
+      border-radius:14px;
+      margin-bottom:15px;
+    }
+
+    .hotel-card a{
+      color:#8fd3ff;
+      text-decoration:none;
+      word-break:break-all;
+    }
+
+    .hotel-card a:hover{
+      text-decoration:underline;
+    }
+
+    .day-card{
+      background:#1e1e1e;
+      border-radius:24px;
+      padding:30px;
+      margin-bottom:35px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.35);
+      transition:0.25s;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .day-card:hover{
+      transform:translateY(-4px);
+    }
+
+    .day-title{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:20px;
+    }
+
+    .day-number{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#5eb5ff,#3f8cff);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      font-weight:bold;
+      box-shadow:0 4px 12px rgba(94,181,255,0.4);
+    }
+
+    .day-title h2{
+      color:#8fd3ff;
+      font-size:28px;
+    }
+
+    .timeline{
+      margin-top:15px;
+    }
+
+    .timeline-item{
+      position:relative;
+      padding-left:30px;
+      margin-bottom:20px;
+    }
+
+    .timeline-item::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:10px;
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      background:#5eb5ff;
+      box-shadow:0 0 10px rgba(94,181,255,0.7);
+    }
+
+    .timeline-item h3{
+      font-size:18px;
+      color:#ffffff;
+      margin-bottom:6px;
+    }
+
+    .timeline-item p{
+      color:#d3d3d3;
+    }
+
+    .note{
+      background:#2d2412;
+      border-left:5px solid #ffcb52;
+      padding:14px;
+      border-radius:12px;
+      margin-top:20px;
+    }
+
+    .note h4{
+      margin-bottom:8px;
+      color:#ffd978;
+    }
+
+    .note p{
+      color:#f3e7c3;
+    }
+
+    a{
+      color:#8fd3ff;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#263849;
+      color:#9ddcff;
+      padding:5px 12px;
+      border-radius:999px;
+      font-size:14px;
+      margin-right:8px;
+      margin-top:8px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      color:#888;
+      font-size:14px;
+    }
+
+    ::selection{
+      background:#5eb5ff;
+      color:white;
+    }
+
 @media(max-width:768px){
 
   body{
@@ -106,7 +270,7 @@ color:white;
     font-size:12px;
   }
 }
-</style>
+  </style>
 </head>
 
 <body>
@@ -114,8 +278,425 @@ color:white;
 <header>
   <h1>北海道自由行 ✈️</h1>
   <p>札幌・小樽・函館 6 日旅遊計畫</p>
-  <h1>🌸你要不要去北海道🌸</h1>
-  <p>札幌・小樽・函館 6天5夜</p>
 </header>
 
 <div class="container">
+
+  <section class="hotel-section">
+    <h2>🏨 住宿資訊</h2>
+
+    <div class="hotel-card">
+      <h3>ベッセルイン札幌中島公園</h3>
+      <p>入住日期：4/24 ～ 4/27</p>
+      <a href="https://maps.app.goo.gl/xtSGCw6yL4jSUj6T9?g_st=ac" target="_blank">
+        查看地圖
+      </a>
+    </div>
+
+    <div class="hotel-card">
+      <h3>JR INN 函館</h3>
+      <p>入住日期：4/27 ～ 4/29</p>
+      <a href="https://maps.app.goo.gl/4NrZJn1JPb3ovfJd8?g_st=ac" target="_blank">
+        查看地圖
+      </a>
+    </div>
+  </section>
+
+
+  <!-- D1 -->
+  <section class="day-card">
+    <div class="day-title">
+      <div class="day-number">1</div>
+      <h2>新千歲機場 → 札幌</h2>
+    </div>
+
+    <span class="tag">✈️ 泰越捷航空</span>
+    <span class="tag">02:50 → 07:35</span>
+
+<div class="timeline">
+
+      <div class="item">
+        <div class="time">14:00</div>
+        <div class="place">新千歲機場</div>
+        <div class="desc">
+          入境後搭 JR 前往札幌市區
+        </div>
+        <div class="tag">交通</div>
+      <div class="timeline-item">
+        <h3>機場必買清單</h3>
+        <p>
+          ・かま栄（魚板）<br>
+          ・アソンブロッソ！（炸薯條）<br>
+          ・札幌農学校（餅乾）<br>
+          ・北海道牛乳カステラ（蛋糕）
+        </p>
+</div>
+
+      <div class="item">
+        <div class="time">17:00</div>
+        <div class="place">狸小路商店街</div>
+        <div class="desc">
+          藥妝、動漫店、扭蛋巡禮
+        </div>
+        <div class="tag">購物</div>
+      <div class="timeline-item">
+        <h3>前往札幌</h3>
+        <p>搭乘機場巴士前往飯店寄放行李。</p>
+</div>
+
+      <div class="item">
+        <div class="time">19:00</div>
+        <div class="place">札幌拉麵共和國</div>
+        <div class="desc">
+          晚餐推薦味噌拉麵
+        </div>
+        <div class="tag">美食</div>
+      <div class="timeline-item">
+        <h3>札幌市區行程</h3>
+        <p>
+          午餐 → 札幌諏訪神社 → Stellar Place Center 購物
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>晚餐</h3>
+        <p>十勝豚丼（Stellar Place 內）</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>晚上自由逛街</h3>
+        <p>狸小路、薄野散步購物。</p>
+</div>
+
+</div>
+  </div>
+  </section>
+
+  <div class="day-card">
+    <div class="day-title">Day 2｜小樽一日遊</div>
+  <!-- D2 -->
+  <section class="day-card">
+    <div class="day-title">
+      <div class="day-number">2</div>
+      <h2>小樽水族館 🐧</h2>
+    </div>
+
+<div class="timeline">
+
+      <div class="item">
+        <div class="time">10:00</div>
+        <div class="place">小樽運河</div>
+        <div class="desc">
+          拍復古街景與玻璃工藝店
+        </div>
+      <div class="timeline-item">
+        <h3>前往小樽</h3>
+        <p>
+          JR 小樽站 → 巴士約 40 分鐘前往水族館
+        </p>
+</div>
+
+      <div class="item">
+        <div class="time">13:00</div>
+        <div class="place">三角市場</div>
+        <div class="desc">
+          海鮮丼午餐
+        </div>
+      <div class="timeline-item">
+        <h3>小樽水族館</h3>
+        <p>
+          海豚秀、企鵝散步、水族館午餐
+        </p>
+</div>
+
+      <div class="item">
+        <div class="time">18:00</div>
+        <div class="place">札幌車站 Anime 巡店</div>
+        <div class="desc">
+          Animate、Jump Shop、快閃店
+        </div>
+      <div class="timeline-item">
+        <h3>小樽運河散步</h3>
+        <p>
+          鐘塔表演、LeTAO 總店、音樂盒商店、史努比商店、伴手禮店
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>晚餐</h3>
+        <p>
+          Century Soup Curry & Indian Nepalese Curry
+          <br>
+          <a href="https://maps.app.goo.gl/FugJ7Tym2jJjsLwu5?g_st=ac" target="_blank">
+            Google Maps
+          </a>
+        </p>
+</div>
+
+</div>
+  </div>
+  </section>
+
+  <div class="day-card">
+    <div class="day-title">Day 3｜自由活動</div>
+  <!-- D3 -->
+  <section class="day-card">
+    <div class="day-title">
+      <div class="day-number">3</div>
+      <h2>北海道神宮・札幌購物 🌸</h2>
+    </div>
+
+<div class="timeline">
+
+      <div class="item">
+        <div class="time">全天</div>
+        <div class="place">可自由安排</div>
+        <div class="desc">
+          推薦：白色戀人公園、藻岩山夜景、Outlet
+        </div>
+      <div class="timeline-item">
+        <h3>早餐</h3>
+        <p>購買飯店早餐券。</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>北海道神宮</h3>
+        <p>
+          圓山公園散步 → 北海道神宮賞櫻、買御守
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>六花亭 神宮茶屋店</h3>
+        <p>
+          必吃紅豆麻糬
+          <br>
+          <a href="https://maps.app.goo.gl/jiiKbVNJDTbuEKyi9?g_st=ac" target="_blank">
+            Google Maps
+          </a>
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>午餐</h3>
+        <p>
+          根室水產 UME 堂 🦀
+          <br>
+          <a href="https://maps.app.goo.gl/xaesXUb5b9hPQjPr8?g_st=ac" target="_blank">
+            Google Maps
+          </a>
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>購物行程</h3>
+        <p>
+          札幌地下街 → 薄野 → 大丸 → PARCO → APIA → 狸小路
+        </p>
+      </div>
+
+        <button onclick="alert('記得預留時間買伴手禮！')">
+          查看提醒
+        </button>
+      <div class="timeline-item">
+        <h3>甜點</h3>
+        <p>
+          ポムダムールトーキョー 札幌すすきの店（蘋果糖）
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>晚餐</h3>
+        <p>
+          とんかつ恭平（炸豬排）
+          <br>
+          <a href="https://maps.app.goo.gl/Yd8pNPd6pj4BKPAQ7" target="_blank">
+            Google Maps
+          </a>
+        </p>
+</div>
+
+</div>
+  </div>
+
+ 
+ <div class="day-card">
+   <div class="day-title">Day 4｜函館</div>
+ 
+   <div class="timeline">
+ 
+     <div class="item">
+       <div class="time">10:00</div>
+       <div class="place">函館朝市</div>
+       <div class="desc">
+         海鮮丼早餐
+       </div>
+     </div>
+ 
+   </div>
+ </div>
+  </section>
+
+  <!-- D4 -->
+  <section class="day-card">
+    <div class="day-title">
+      <div class="day-number">4</div>
+      <h2>札幌 → 函館 🚄</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <h3>札幌站寄放行李</h3>
+        <p>JR 札幌站西口寄放。</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>午餐</h3>
+        <p>
+          氷雪の門（需提前一個月預約）
+          <br>
+          <a href="https://maps.app.goo.gl/PVXnAWvqbiJEWQDDA?g_st=ac" target="_blank">
+            Google Maps
+          </a>
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>北斗特急</h3>
+        <p>
+          札幌 → 函館（約 3 小時 44 分）
+          <br>
+          記得提前預訂車票。
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>函館入住</h3>
+        <p>JR INN 函館（與函館車站連通）</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>晚餐</h3>
+        <p>
+          Lucky Pierrot 小丑漢堡 🍔
+          <br>
+          蛋包飯份量超大！
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- D5 -->
+  <section class="day-card">
+    <div class="day-title">
+      <div class="day-number">5</div>
+      <h2>函館市區・五稜郭夜櫻 🌸</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <h3>烤菠蘿麵包</h3>
+        <p>
+          世界第 2 好吃的烤菠蘿麵包
+          <br>
+          <a href="https://maps.app.goo.gl/rCziTW8Q4oPSBnhP7?g_st=ac" target="_blank">
+            Google Maps
+          </a>
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>函館散步</h3>
+        <p>
+          八幡坂 → 金森紅磚倉庫 → 金森洋物館
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>甜點巡禮</h3>
+        <p>
+          Petite Merveille 起司蛋糕<br>
+          Pastry Snaffle's 起司蛋糕
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>五稜郭賞櫻</h3>
+        <p>
+          先登五稜郭塔拍五角星景色，再下來賞櫻野餐。
+          <br>
+          晚上欣賞夜櫻點燈。
+          <br><br>
+          <a href="https://maps.app.goo.gl/9m1tWtgbnGWKyxPq6?g_st=ac" target="_blank">
+            五稜郭地圖
+          </a>
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>六花亭 五稜郭店</h3>
+        <p>買伴手禮與甜點。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- D6 -->
+  <section class="day-card">
+    <div class="day-title">
+      <div class="day-number">6</div>
+      <h2>函館 → 台北 ✈️</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <h3>飯店早餐</h3>
+        <p>悠閒享用早餐。</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>前往機場</h3>
+        <p>
+          函館市區 → 函館空港 HKD
+          <br>
+          機場巴士費用：700 日圓（現金）
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>注意事項</h3>
+        <p>
+          國際線航廈 10:00 才開始服務，
+          不要太早抵達。
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>回台北 🇹🇼</h3>
+        <p>旅程結束！</p>
+      </div>
+
+    </div>
+
+    <div class="note">
+      <h4>💡 小提醒</h4>
+      <p>
+        ・JR 車票建議提前預約<br>
+        ・函館機場巴士請提前準備零錢<br>
+        ・五稜郭夜櫻記得查點燈日期
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  北海道自由行旅遊計畫｜札幌・小樽・函館
+</footer>
+
+</body>
+</html>
