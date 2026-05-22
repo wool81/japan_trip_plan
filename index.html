@@ -1,137 +1,110 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>你要不要去北海道</title>
+  <title>北海道自由行旅遊計畫</title>
+  <title>你要不要去北海道</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+@@ -192,32 +192,92 @@
+color:white;
 }
 
-body{
-  font-family:"Noto Sans TC",sans-serif;
-  background:#121212;
-  color:#f1f1f1;
-  line-height:1.7;
-}
+    @media(max-width:768px){
 
-/* header */
-header{
-  background:linear-gradient(135deg,#1f3b57,#27496d);
-  color:white;
-  padding:50px 20px;
-  text-align:center;
-}
+      header h1{
+        font-size:32px;
+      }
 
-header h1{font-size:36px;}
-header p{opacity:0.9}
+      .day-title{
+        align-items:flex-start;
+      }
 
-/* container */
-.container{
-  max-width:1100px;
-  margin:30px auto;
-  padding:0 16px;
-}
+      .day-title h2{
+        font-size:22px;
+      }
 
-/* tabs */
-.tabs{
-  display:flex;
-  gap:10px;
-  overflow-x:auto;
-  margin-bottom:20px;
-}
-
-.tab-btn{
-  border:none;
-  background:#263849;
-  color:#9ddcff;
-  padding:10px 16px;
-  border-radius:999px;
-  cursor:pointer;
-  white-space:nowrap;
-}
-
-.tab-btn.active{
-  background:#5eb5ff;
-  color:#fff;
-}
-
-/* content */
-.tab-content{
-  display:none;
-}
-
-.tab-content.active{
-  display:block;
-}
-
-/* cards */
-.day-card{
-  background:#1e1e1e;
-  border-radius:18px;
-  padding:20px;
-  border:1px solid rgba(255,255,255,0.05);
-  margin-bottom:20px;
-}
-
-.day-title{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  margin-bottom:15px;
-}
-
-.day-number{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:#5eb5ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-}
-
-/* timeline */
-.timeline{
-  margin-top:10px;
-}
-
-.timeline-item{
-  margin-bottom:14px;
-  padding-left:18px;
-  border-left:2px solid #5eb5ff;
-}
-
-.timeline-item h3{
-  font-size:16px;
-  margin-bottom:4px;
-}
-
-.timeline-item p{
-  font-size:14px;
-  color:#ccc;
-}
-
-/* tags */
-.tag{
-  display:inline-block;
-  background:#263849;
-  color:#9ddcff;
-  padding:4px 10px;
-  border-radius:999px;
-  font-size:12px;
-  margin:6px 6px 0 0;
-}
-
-/* mobile */
+      .day-card{
+        padding:24px;
+      }
+    }
 @media(max-width:768px){
-  header h1{font-size:26px;}
-  .day-card{padding:16px;}
+
+  body{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  header{
+    padding:36px 16px;
+  }
+
+  header h1{
+    font-size:28px;
+  }
+
+  header p{
+    font-size:15px;
+  }
+
+  .container{
+    padding:0 12px;
+    margin:24px auto;
+  }
+
+  .hotel-section,
+  .day-card{
+    padding:18px;
+    border-radius:18px;
+    margin-bottom:20px;
+  }
+
+  .day-title{
+    gap:10px;
+    align-items:center;
+    margin-bottom:16px;
+  }
+
+  .day-number{
+    width:42px;
+    height:42px;
+    font-size:18px;
+  }
+
+  .day-title h2{
+    font-size:20px;
+    line-height:1.3;
+  }
+
+  .timeline-item{
+    padding-left:22px;
+    margin-bottom:16px;
+  }
+
+  .timeline-item::before{
+    width:9px;
+    height:9px;
+    top:8px;
+  }
+
+  .timeline-item h3{
+    font-size:16px;
+    margin-bottom:4px;
+  }
+
+  .timeline-item p{
+    font-size:14px;
+  }
+
+  .tag{
+    font-size:12px;
+    padding:4px 9px;
+  }
+
+  footer{
+    padding:24px 12px;
+    font-size:12px;
+  }
 }
 </style>
 </head>
@@ -139,209 +112,10 @@ header p{opacity:0.9}
 <body>
 
 <header>
+  <h1>北海道自由行 ✈️</h1>
+  <p>札幌・小樽・函館 6 日旅遊計畫</p>
   <h1>🌸你要不要去北海道🌸</h1>
   <p>札幌・小樽・函館 6天5夜</p>
 </header>
 
 <div class="container">
-
-<!-- tabs -->
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab(1)">D1</button>
-  <button class="tab-btn" onclick="showTab(2)">D2</button>
-  <button class="tab-btn" onclick="showTab(3)">D3</button>
-  <button class="tab-btn" onclick="showTab(4)">D4</button>
-  <button class="tab-btn" onclick="showTab(5)">D5</button>
-  <button class="tab-btn" onclick="showTab(6)">D6</button>
-</div>
-
-<!-- D1 -->
-<div class="tab-content active" id="day1">
-
-<section class="day-card">
-  <div class="day-title">
-    <div class="day-number">1</div>
-    <h2>新千歲機場 → 札幌</h2>
-  </div>
-
-  <span class="tag">✈️ 泰越捷航空</span>
-  <span class="tag">02:50～07:35</span>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>機場必買清單</h3>
-      <p>
-        かま栄（魚板）<br>
-        アソンブロッソ！（炸薯條）<br>
-        札幌農学校（餅乾）<br>
-        北海道牛乳カステラ（蛋糕）
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>前往札幌</h3>
-      <p>機場巴士 → 飯店放行李</p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>札幌市區</h3>
-      <p>神社 / Stellar Place / 逛街</p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>晚餐</h3>
-      <p>十勝豚丼</p>
-    </div>
-
-  </div>
-</section>
-
-</div>
-
-<!-- D2 -->
-<div class="tab-content" id="day2">
-
-<section class="day-card">
-  <div class="day-title">
-    <div class="day-number">2</div>
-    <h2>小樽水族館 🐧</h2>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>小樽水族館</h3>
-      <p>海豚秀 / 企鵝散步</p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>小樽運河</h3>
-      <p>音樂盒 / LeTAO / 伴手禮</p>
-    </div>
-
-  </div>
-</section>
-
-</div>
-
-<!-- D3 -->
-<div class="tab-content" id="day3">
-
-<section class="day-card">
-  <div class="day-title">
-    <div class="day-number">3</div>
-    <h2>北海道神宮・購物 🌸</h2>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>北海道神宮</h3>
-      <p>賞櫻 / 御守</p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>購物</h3>
-      <p>狸小路 / 百貨</p>
-    </div>
-
-  </div>
-</section>
-
-</div>
-
-<!-- D4 -->
-<div class="tab-content" id="day4">
-
-<section class="day-card">
-  <div class="day-title">
-    <div class="day-number">4</div>
-    <h2>札幌 → 函館 🚄</h2>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>北斗特急</h3>
-      <p>約 3.5 小時</p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>函館入住</h3>
-      <p>JR INN 函館</p>
-    </div>
-
-  </div>
-</section>
-
-</div>
-
-<!-- D5 -->
-<div class="tab-content" id="day5">
-
-<section class="day-card">
-  <div class="day-title">
-    <div class="day-number">5</div>
-    <h2>函館市區・五稜郭 🌸</h2>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>八幡坂 / 金森倉庫</h3>
-      <p>散步拍照</p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>五稜郭</h3>
-      <p>賞櫻 / 夜櫻</p>
-    </div>
-
-  </div>
-</section>
-
-</div>
-
-<!-- D6 -->
-<div class="tab-content" id="day6">
-
-<section class="day-card">
-  <div class="day-title">
-    <div class="day-number">6</div>
-    <h2>回台北 ✈️</h2>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>機場</h3>
-      <p>函館 → 台北</p>
-    </div>
-
-  </div>
-</section>
-
-</div>
-
-</div>
-
-<script>
-function showTab(day){
-
-  document.querySelectorAll('.tab-content')
-    .forEach(el => el.classList.remove('active'));
-
-  document.querySelectorAll('.tab-btn')
-    .forEach(el => el.classList.remove('active'));
-
-  document.getElementById('day'+day)
-    .classList.add('active');
-
-  document.querySelectorAll('.tab-btn')[day-1]
-    .classList.add('active');
-}
-</script>
-
-</body>
-</html>
