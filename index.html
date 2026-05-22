@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>北海道五天四夜旅行計畫</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: "Noto Sans TC", sans-serif;
+  background:#0f172a;
+  color:white;
+  line-height:1.6;
+}
+
+.hero{
+  height:40vh;
+  background:
+    linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1600");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.hero p{
+  opacity:.9;
+}
+
+.container{
+  width:min(1000px, 92%);
+  margin:auto;
+  padding:40px 0;
+}
+
+.day-card{
+  background:#1e293b;
+  border-radius:24px;
+  padding:24px;
+  margin-bottom:28px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  transition:.3s;
+}
+
+.day-card:hover{
+  transform:translateY(-5px);
+}
+
+.day-title{
+  font-size:1.7rem;
+  margin-bottom:20px;
+  color:#93c5fd;
+}
+
+.timeline{
+  border-left:2px solid #334155;
+  padding-left:20px;
+}
+
+.item{
+  margin-bottom:24px;
+  position:relative;
+}
+
+.item::before{
+  content:"";
+  width:14px;
+  height:14px;
+  background:#60a5fa;
+  border-radius:50%;
+  position:absolute;
+  left:-28px;
+  top:8px;
+}
+
+.time{
+  color:#93c5fd;
+  font-weight:bold;
+}
+
+.place{
+  font-size:1.1rem;
+  margin:4px 0;
+}
+
+.desc{
+  color:#cbd5e1;
+  font-size:.95rem;
+}
+
+.tag{
+  display:inline-block;
+  background:#2563eb;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:.8rem;
+  margin-top:8px;
+}
+
+.footer{
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+}
+
+button{
+  background:#3b82f6;
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  margin-top:10px;
+  transition:.2s;
+}
+
+button:hover{
+  background:#2563eb;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:2rem;
+}
+
+.day-title{
+  font-size:1.4rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div>
+    <h1>北海道 5 Days ✈️</h1>
+    <p>札幌｜小樽｜函館｜美食｜夜景｜動漫快閃店</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="day-card">
+    <div class="day-title">Day 1｜抵達札幌</div>
+
+    <div class="timeline">
+
+      <div class="item">
+        <div class="time">14:00</div>
+        <div class="place">新千歲機場</div>
+        <div class="desc">
+          入境後搭 JR 前往札幌市區
+        </div>
+        <div class="tag">交通</div>
+      </div>
+
+      <div class="item">
+        <div class="time">17:00</div>
+        <div class="place">狸小路商店街</div>
+        <div class="desc">
+          藥妝、動漫店、扭蛋巡禮
+        </div>
+        <div class="tag">購物</div>
+      </div>
+
+      <div class="item">
+        <div class="time">19:00</div>
+        <div class="place">札幌拉麵共和國</div>
+        <div class="desc">
+          晚餐推薦味噌拉麵
+        </div>
+        <div class="tag">美食</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-title">Day 2｜小樽一日遊</div>
+
+    <div class="timeline">
+
+      <div class="item">
+        <div class="time">10:00</div>
+        <div class="place">小樽運河</div>
+        <div class="desc">
+          拍復古街景與玻璃工藝店
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="time">13:00</div>
+        <div class="place">三角市場</div>
+        <div class="desc">
+          海鮮丼午餐
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="time">18:00</div>
+        <div class="place">札幌車站 Anime 巡店</div>
+        <div class="desc">
+          Animate、Jump Shop、快閃店
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-title">Day 3｜自由活動</div>
+
+    <div class="timeline">
+
+      <div class="item">
+        <div class="time">全天</div>
+        <div class="place">可自由安排</div>
+        <div class="desc">
+          推薦：白色戀人公園、藻岩山夜景、Outlet
+        </div>
+
+        <button onclick="alert('記得預留時間買伴手禮！')">
+          查看提醒
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Made with AI ✨
+</div>
+
+</body>
+</html>
