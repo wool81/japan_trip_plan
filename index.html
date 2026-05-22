@@ -69,15 +69,15 @@ header p{opacity:0.9}
   display:block;
 }
 
-/* card */
+/* cards */
 .day-card{
   background:#1e1e1e;
   border-radius:18px;
   padding:20px;
   border:1px solid rgba(255,255,255,0.05);
+  margin-bottom:20px;
 }
 
-/* title */
 .day-title{
   display:flex;
   gap:10px;
@@ -97,6 +97,10 @@ header p{opacity:0.9}
 }
 
 /* timeline */
+.timeline{
+  margin-top:10px;
+}
+
 .timeline-item{
   margin-bottom:14px;
   padding-left:18px;
@@ -113,7 +117,7 @@ header p{opacity:0.9}
   color:#ccc;
 }
 
-/* tag */
+/* tags */
 .tag{
   display:inline-block;
   background:#263849;
@@ -153,115 +157,171 @@ header p{opacity:0.9}
 
 <!-- D1 -->
 <div class="tab-content active" id="day1">
-  <div class="day-card">
-    <div class="day-title">
-      <div class="day-number">1</div>
-      <h2>新千歲機場 → 札幌</h2>
-    </div>
 
-    <span class="tag">✈️ 泰越捷航空</span>
-    <span class="tag">02:50 → 07:35</span>
+<section class="day-card">
+  <div class="day-title">
+    <div class="day-number">1</div>
+    <h2>新千歲機場 → 札幌</h2>
+  </div>
+
+  <span class="tag">✈️ 泰越捷航空</span>
+  <span class="tag">02:50～07:35</span>
+
+  <div class="timeline">
 
     <div class="timeline-item">
-      <h3>機場必買</h3>
-      <p>魚板、薯條、餅乾、蛋糕</p>
+      <h3>機場必買清單</h3>
+      <p>
+        かま栄（魚板）<br>
+        アソンブロッソ！（炸薯條）<br>
+        札幌農学校（餅乾）<br>
+        北海道牛乳カステラ（蛋糕）
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>前往札幌</h3>
+      <p>機場巴士 → 飯店放行李</p>
     </div>
 
     <div class="timeline-item">
       <h3>札幌市區</h3>
-      <p>神社 + Stellar Place + 逛街</p>
+      <p>神社 / Stellar Place / 逛街</p>
     </div>
 
     <div class="timeline-item">
       <h3>晚餐</h3>
       <p>十勝豚丼</p>
     </div>
+
   </div>
+</section>
+
 </div>
 
 <!-- D2 -->
 <div class="tab-content" id="day2">
-  <div class="day-card">
-    <div class="day-title">
-      <div class="day-number">2</div>
-      <h2>小樽水族館</h2>
-    </div>
+
+<section class="day-card">
+  <div class="day-title">
+    <div class="day-number">2</div>
+    <h2>小樽水族館 🐧</h2>
+  </div>
+
+  <div class="timeline">
 
     <div class="timeline-item">
       <h3>小樽水族館</h3>
-      <p>海豚秀、企鵝散步</p>
+      <p>海豚秀 / 企鵝散步</p>
     </div>
 
     <div class="timeline-item">
       <h3>小樽運河</h3>
-      <p>音樂盒、LeTAO、散步</p>
+      <p>音樂盒 / LeTAO / 伴手禮</p>
     </div>
+
   </div>
+</section>
+
 </div>
 
 <!-- D3 -->
 <div class="tab-content" id="day3">
-  <div class="day-card">
-    <div class="day-title">
-      <div class="day-number">3</div>
-      <h2>北海道神宮 & 購物</h2>
-    </div>
+
+<section class="day-card">
+  <div class="day-title">
+    <div class="day-number">3</div>
+    <h2>北海道神宮・購物 🌸</h2>
+  </div>
+
+  <div class="timeline">
 
     <div class="timeline-item">
       <h3>北海道神宮</h3>
-      <p>賞櫻 + 御守</p>
+      <p>賞櫻 / 御守</p>
     </div>
 
     <div class="timeline-item">
       <h3>購物</h3>
-      <p>狸小路 + 百貨</p>
+      <p>狸小路 / 百貨</p>
     </div>
+
   </div>
+</section>
+
 </div>
 
 <!-- D4 -->
 <div class="tab-content" id="day4">
-  <div class="day-card">
-    <div class="day-title">
-      <div class="day-number">4</div>
-      <h2>札幌 → 函館</h2>
-    </div>
+
+<section class="day-card">
+  <div class="day-title">
+    <div class="day-number">4</div>
+    <h2>札幌 → 函館 🚄</h2>
+  </div>
+
+  <div class="timeline">
 
     <div class="timeline-item">
       <h3>北斗特急</h3>
       <p>約 3.5 小時</p>
     </div>
+
+    <div class="timeline-item">
+      <h3>函館入住</h3>
+      <p>JR INN 函館</p>
+    </div>
+
   </div>
+</section>
+
 </div>
 
 <!-- D5 -->
 <div class="tab-content" id="day5">
-  <div class="day-card">
-    <div class="day-title">
-      <div class="day-number">5</div>
-      <h2>函館市區</h2>
+
+<section class="day-card">
+  <div class="day-title">
+    <div class="day-number">5</div>
+    <h2>函館市區・五稜郭 🌸</h2>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>八幡坂 / 金森倉庫</h3>
+      <p>散步拍照</p>
     </div>
 
     <div class="timeline-item">
       <h3>五稜郭</h3>
-      <p>賞櫻 + 夜景</p>
+      <p>賞櫻 / 夜櫻</p>
     </div>
+
   </div>
+</section>
+
 </div>
 
 <!-- D6 -->
 <div class="tab-content" id="day6">
-  <div class="day-card">
-    <div class="day-title">
-      <div class="day-number">6</div>
-      <h2>回台北</h2>
-    </div>
+
+<section class="day-card">
+  <div class="day-title">
+    <div class="day-number">6</div>
+    <h2>回台北 ✈️</h2>
+  </div>
+
+  <div class="timeline">
 
     <div class="timeline-item">
       <h3>機場</h3>
-      <p>函館 → 台灣</p>
+      <p>函館 → 台北</p>
     </div>
+
   </div>
+</section>
+
 </div>
 
 </div>
